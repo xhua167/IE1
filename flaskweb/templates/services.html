@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+{% block content %}
+        <h1>Our Services</h1>
+        <p>Are you in immediate danger? Call 000</p>
+    <div class="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" >
+                <h5>Accommodation & Cheap Food</h5>
+                <img src="/static/img/accommodation.jpg" class="center-block img-fluid"/>
+                <a href="{{ url_for('serviceDisplay', service_name='accommodation') }}" class="btn btn-info">Find More</a>
+            </div>
+            <div class="col-sm-4">
+                <h5>Essential Items</h5>
+                <img src="/static/img/es.jpg" class="center-block img-fluid"/>
+                <a href="{{ url_for('serviceDisplay', service_name='essential') }}" class="btn btn-info">Find More</a>
+            </div>
+            <div class="col-sm-4">
+                <h5>Legal Advice</h5>
+                <img src="/static/img/advice.jpg" class="center-block img-fluid"/>
+                <a href="{{ url_for('serviceDisplay', service_name='legal') }}" class="btn btn-info">Find More</a>
+            </div>
+        </div>
+    </div>
+    <p></p>
+    <p></p>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4" >
+                <h5>Health</h5>
+                <img src="/static/img/health.jpg" class="center-block img-fluid"/>
+                <a href="{{ url_for('serviceDisplay', service_name='health') }}" class="btn btn-info">Find More</a>
+            </div>
+            <div class="col-sm-4">
+                <h5>Hotlines</h5>
+                <img src="/static/img/hotlines.jpg" class="center-block img-fluid"/>
+                <a href="{{ url_for('serviceDisplay', service_name='hotlines') }}" class="btn btn-info">Find More</a>
+            </div>
+            <div class="col-sm-4">
+                <h5>Others</h5>
+                <img src="/static/img/others.jpg" class="center-block img-fluid"/>
+                <a href="{{ url_for('serviceDisplay', service_name='others') }}" class="btn btn-info">Find More</a>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block head %}
+    <style>
+        .overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-image: url({{ url_for('static', filename='img/home3.jpg')}});
+        background-repeat: no-repeat; background-size: cover;
+        z-index: 1;}
+    </style>
+{% endblock head %}
+{% block content %}
+    <div class="overlay">
+        <div style="margin-top: 120px; margin-left: 22px">
+            <h1>Helping the Homeless</h1>
+        <p>Are you struggling with domestic violence?</p>
+        <p>We can help you.</p>
+        <a href="{{ url_for('services') }}" class="btn btn-info">Our Services</a>
+        </div>
+    </div>
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% if servicename != 'hotlines' %}
+        {% if data['Address'] != 'nan' %}
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item">Name: {{ data['Name'] }}</li>
+            <li class="list-group-item">Description: {{ data['What'] }}</li>
+            <li class="list-group-item">Address: {{ data['Address'] }}, {{ data['Suburb']}}</li>
+            <li class="list-group-item">Phone: {{ data['Phone'] }}</li>
+            <li class="list-group-item">Eamil: {{ data['Email'] }}</li>
+            <li class="list-group-item">Website: {{ data['Website'] }}</li>
+            <li class="list-group-item">Opening Hours: {{ data['Opening Hours'] }}</li>
+            </ul>
+        {% endif %}
+    {% endif %}
+    {% if servicename == 'hotlines' %}
+            <li class="list-group-item">Phone: {{ data['Phone'] }}</li>
+            <li class="list-group-item">Email: {{ data['Email'] }}</li>
+            <li class="list-group-item">Website: {{ data['Website'] }}</li>
+            <li class="list-group-item">Opening Hours: {{ data['Opening Hours'] }}</li>
+    {% endif %}
+{% endblock content %}
